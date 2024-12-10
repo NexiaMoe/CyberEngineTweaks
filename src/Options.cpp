@@ -186,12 +186,12 @@ Options::Options(Paths& aPaths)
         Log::Info("Cyber Engine Tweaks path: \"{}\"", UTF16ToUTF8(aPaths.CETRoot().native()));
         Log::Info("Lua scripts search path: \"{}\"", UTF16ToUTF8(aPaths.ModsRoot().native()));
 
-        if (GameImage.FileVersion != RED4EXT_RUNTIME_LATEST)
-        {
-            const auto [smajor, sminor] = Image::GetSupportedVersion();
-            Log::Error("Unsupported game version! Only {}.{:02d} is supported.", smajor, sminor);
-            throw std::runtime_error("Unsupported version");
-        }
+        // if (GameImage.FileVersion != RED4EXT_RUNTIME_LATEST)
+        // {
+        //     const auto [smajor, sminor] = Image::GetSupportedVersion();
+        //     Log::Error("Unsupported game version! Only {}.{:02d} is supported.", smajor, sminor);
+        //     throw std::runtime_error("Unsupported version");
+        // }
     }
     else
     {
